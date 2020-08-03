@@ -2,8 +2,11 @@
 Project written in Java, SpringBoot and gradle for build.
 
 Steps to build & run:
+
 ./gradlew clean build
+
 docker build -t=search-service 
+
 docker run -p 9090:9090 search-service:latest
 
 Check health:

@@ -1,0 +1,20 @@
+spring:
+   application:
+      name: search-service
+   profiles:
+      active: qa
+
+server:
+   port: 9090
+   servlet:
+      context-path: '/search-service'
+endpoints:
+   prometheus:
+      enabled: true
+management:
+   security:
+      flag: false
+   endpoints:
+      web:
+         exposure:
+            include: health,prometheus,info,metrics,threaddump

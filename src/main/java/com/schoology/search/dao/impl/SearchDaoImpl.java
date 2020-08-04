@@ -3,14 +3,13 @@ package com.schoology.search.dao.impl;
 import com.schoology.search.dao.SearchDao;
 import org.springframework.stereotype.Component;
 
-import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.stream.Collectors;
 
 @Component
 public class SearchDaoImpl implements SearchDao {
-    ConcurrentLinkedQueue<String> searchTerms = new ConcurrentLinkedQueue<>();
+    private ConcurrentSkipListSet<String>  searchTerms = new ConcurrentSkipListSet<>();
 
     @Override
     public void addSearchTerm(String query) {
